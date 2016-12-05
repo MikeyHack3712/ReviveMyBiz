@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Donate</h2>
+                    <h3>{{ company.business_name }}</h3>
+                    <hr class="star-primary">
+                </div>
+            </div>
+      <div class="container">
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Donate $75</a></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Donate $85</a></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Donate $100</a></button>
+                </p>
+                <div class="form-group">
+                    <button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Donate</a></button>
+                    <input type="" placeholder="Amount $" >
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/doner/{{ company.index }}">Donate 20 chairs</a></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/doner/{{ company.index }}">Donate 40 chairs</a></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/doner/{{ company.index }}">Donaten 10 Tables</a></button>
+                </p>
+                <p>
+                    <button type="button" class="btn btn-lg btn-default"><a href="/doner/{{ company.index }}">Donate 20 Tables</a></button>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    

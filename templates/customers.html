@@ -1,0 +1,21 @@
+{% extends "business_view.html" %}
+{% set active_view = "customers" %}
+{% block business_view_content %}
+<div>
+    <button type="button" class="btn btn-lg btn-default"><a href="/add_customer/{{ company.index }}">Add Customer</a></button>
+    <hr/>
+    <br/>
+    <br/>
+    {% for customer in company.customers %}
+    <div>
+        {{ customer.name }}
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-lg btn-default"><a href="mailto:{{ customer.email }}">Email</a></button>
+        <button type="button" class="btn btn-lg btn-default"><a href="/company/{{ company.index }}/customer/{{ customer.index }}/txns">Transactions</a></button>
+        <a href="https://www.facebook.com/Revivemybiz-221524728282735/?skip_nax_wizard=true" class="btn-social btn-primary"><i class="fa fa-fw fa-facebook"></i></a>
+        <a href="https://twitter.com/Revivemybiz1" class="btn-social btn-primary"><i class="fa fa-fw fa-twitter"></i></a>
+    </div>
+    <hr/>
+    {%  endfor %}
+</div>
+{% endblock %}

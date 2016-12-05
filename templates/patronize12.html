@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+   <div class="row">
+       <div class="col-md-">
+           <br/><br/><br/><br/>
+           <h1>Support {{ company.business_name }}</h1>
+           <br/><br/><br/><br/><br/>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-md-3">
+            <img src="/static/certificate1.jpg" height="200" weight="200" />
+            <p><button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Patronize</button></a></p>
+        </div>
+        <div class="col-md-3">
+            <img src="/static/certificate2.jpg" height="200" weight="200" />
+            <p><button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Patronize</button></a></p>
+        </div>
+        <div class="col-md-3">
+            <img src="/static/certificate3.jpg" height="200" weight="200" />
+            <p><button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Patronize</button></a></p>
+        </div>
+        <div class="col-md-3">
+            <img src="/static/certificate4.jpg" height="200" weight="200" />
+            <p><button type="button" class="btn btn-lg btn-default"><a href="/card/{{ company.index }}">Patronize</button></a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-">
+             <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+    </div>
+</div>
+{% endblock %}

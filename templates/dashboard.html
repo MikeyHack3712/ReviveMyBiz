@@ -1,0 +1,11 @@
+{% extends "business_view.html" %}
+{% set active_view = "dashboard" %}
+{% block business_view_content %}
+  <div>{{ company.business_description }}</div>
+  <div>
+      <br/>
+      Phone: <a href="tel:{{ company.business_phone }}">{{ company.business_phone }}</a><br/>
+      Email: <a href="mailto:{{ company.business_email }}">{{ company.business_email }}</a><br/>
+      Address: <a href="https://www.google.com/maps/place/{{ company.business_address.line1 }},{{ company.business_address.city }},{{ company.business_address.state }},{{ company.business_address.zip }}">{{ company.business_address.line1 }}, {{ company.business_address.line2 }}, {{ company.business_address.city }}, {{ company.business_address.state }}  {{ company.business_address.zip }}</a><br/>
+  </div>
+{% endblock %}

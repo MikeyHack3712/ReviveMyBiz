@@ -1,0 +1,75 @@
+{% extends "business_view.html" %}
+{% set active_view = "customers" %}
+{% block business_view_content %}
+    <section id="add_customer">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="add_customer" id="add_customer" novalidate action="" method="POST">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Name</label>
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter the customer's name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" placeholder="Phone" id="phone" name="phone" data-validation-required-message="Please enter the customer's phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Email</label>
+                                <input type="text" class="form-control" placeholder="Email" id="email" name="email" data-validation-required-message="Please enter the customer's email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Address Line 1</label>
+                                <input type="tel" class="form-control" placeholder="Address Line 1" id="address_line1" name="address_line1" data-validation-required-message="Please enter line 1 of your customer address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Address Line 2</label>
+                                <input type="tel" class="form-control" placeholder="Address Line 2" id="address_line2" name="address_line2" data-validation-required-message="Please enter line 2 of your customer address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Address City</label>
+                                <input type="tel" class="form-control" placeholder="Address City" id="address_city" name="address_city" data-validation-required-message="Please enter city of your customer address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Address State</label>
+                                <input type="tel" class="form-control" placeholder="Address State" id="address_state" name="address_state" data-validation-required-message="Please enter state of your customer address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Address Zip Code</label>
+                                <input type="tel" class="form-control" placeholder="Address Zip" id="address_zip" name="address_zip" data-validation-required-message="Please enter zip code of your customer address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Add Customer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

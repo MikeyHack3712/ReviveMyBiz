@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+<div class="container">
+  <div class="row">
+      <div class="modal-body">
+      <div style="text-align: center; ">
+          <p>
+              <button type="button" class="btn btn-lg btn-{%  if active_view == "dashboard" %}primary{% else  %}default{% endif %}" ><a href="/dashboard/{{ company.index }}">Dashboard</a></button>
+              <button type="button" class="btn btn-lg btn-{%  if active_view == "customers" %}primary{% else  %}default{% endif %}" ><a href="/customers/{{ company.index }}">Customers</a></button>
+              <button type="button" class="btn btn-lg btn-{%  if active_view == "edit" %}primary{% else  %}default{% endif %}"><a href="/edit/{{ company.index }}">Edit Profile</a></button>
+              <button type="button" class="btn btn-lg btn-{%  if active_view == "insurance" %}primary{% else  %}default{% endif %}"><a href="/insurance/{{ company.index }}">Get Insurance</a></button>
+              <button type="button" class="btn btn-lg btn-{%  if active_view == "risk" %}primary{% else  %}default{% endif %}"><a href="/risk/{{ company.index }}">Risk Profile</a></button>
+          </p>
+          <h2>{{ company.business_name }}</h2>
+          <hr class="star-primary">
+          <img src="{{ company.business_image }}" height="200px" width="200px" class="img-responsive img-centered" alt="">
+          {% block business_view_content %}{% endblock %}
+      </div>
+  </div>
+</div>
+</div>
+{% endblock %}
